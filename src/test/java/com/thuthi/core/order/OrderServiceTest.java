@@ -1,5 +1,6 @@
 package com.thuthi.core.order;
 
+import com.thuthi.core.AppConfig;
 import com.thuthi.core.member.Grade;
 import com.thuthi.core.member.Member;
 import com.thuthi.core.member.MemberService;
@@ -8,8 +9,9 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class OrderServiceTest {
-    private final MemberService memberService = new MemberServiceImpl();
-    private final OrderService orderService = new OrderServiceImpl();
+    private final AppConfig appConfig = new AppConfig();
+    private final MemberService memberService = appConfig.memberService();
+    private final OrderService orderService = appConfig.orderService();
 
     @Test
     public void createOrder() throws Exception {

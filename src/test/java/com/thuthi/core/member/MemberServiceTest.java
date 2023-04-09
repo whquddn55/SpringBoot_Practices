@@ -1,10 +1,14 @@
 package com.thuthi.core.member;
 
 import static org.assertj.core.api.Assertions.*;
+
+import com.thuthi.core.AppConfig;
+import com.thuthi.core.order.OrderService;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
-    MemberService memberService = new MemberServiceImpl();
+    private final AppConfig appConfig = new AppConfig();
+    private final MemberService memberService = appConfig.memberService();
     @Test
     public void join() throws Exception {
         // given
