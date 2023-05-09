@@ -1,4 +1,4 @@
-package com.thuthi.springmvc.requestmapping;
+package com.thuthi.springmvc.basic.requestmapping;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
